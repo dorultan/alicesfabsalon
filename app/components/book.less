@@ -1,0 +1,159 @@
+.book-main {
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 60px;
+	background: radial-gradient(ellipse at top, #fff 60%, transparent),
+				radial-gradient(circle at center, #c4c4c4 40%, transparent);
+	.container {
+		
+		.section-title {
+
+			color: #555;
+
+			h1 {
+				span {
+					border-left: 4px solid #333;
+					padding: 0 5px;
+				}
+
+				i {
+					padding: 0 10px;
+					color: #dbdbdb;
+				}
+			}
+		}
+
+		.flex-row.service-booked {
+			margin: 0;
+			padding: 10px;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			max-width: 800px;
+			margin-left: auto;
+			margin-right: auto;
+			border: 1px solid #f1f1f1;
+			
+			.flex-col {
+				flex-grow: 1;
+				max-width: 400px;
+				flex-basis: 250px;
+				display: flex;
+				flex-direction: column;
+					
+
+				.service-name {
+					color: #fccf80;
+				}
+			
+				.service-description {
+				
+				}
+					
+				.service-price {
+					p {
+						font-weight: bold;
+					}
+				}
+
+				.service-change {
+
+					a {
+						padding: 5px 10px;
+						border: 1px solid #82562B;
+						color: #82562B;
+						text-decoration: none;
+					}
+				}
+
+				img {
+					width: 100%;
+					max-width: 350px;
+					vertical-align: center;
+					height: auto;
+					box-shadow: 0 0 50px 0 #f1f1f1;
+					padding: 5px;
+					background: #fff;
+				}
+			}
+		}
+
+		.flex-row.client-details {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			max-width: 800px;
+			margin-left: auto;
+			margin-right: auto;
+
+			.flex-col {
+				flex-grow: 1;
+
+				.book-form {
+					width: 100%;
+
+					fieldset {
+						width: 100%;
+						margin: 20px 0;
+						position: relative;
+						
+						input {
+							padding: 5px 30px;
+							font-size: 17px;
+							width: 100%;
+							border-bottom: 1px solid #dbdbdb;
+							box-shadow: none;
+							border-top: none;
+							border-right: none;
+							border-left: none;
+						}
+						
+						input:focus::placeholder {
+							display: block;
+							visibility: visible;
+						}
+
+						input[type=number]::-webkit-inner-spin-button, 
+						input[type=number]::-webkit-outer-spin-button { 
+						  -webkit-appearance: none; 
+						  margin: 0; 
+						}
+
+						input:focus {
+							outline: 0 none;
+						}
+
+						i {
+							position: absolute;
+							color: #c2c2c2;
+							font-size: 22px;
+							padding: 5px;
+						}
+					}
+
+					.submit-button {
+
+						button {
+							width: 100%;
+							color: #fff;
+							border: none;
+							box-shadow: 0 0 10px 0 #dbdbdb;
+							background: #7f4e1a;
+							font-weight: bold;
+							padding: 10px 20px;
+							transition: all .5s;
+						}
+
+						button:hover,
+						button:focus {
+							background: #82582e;
+							transition: all .5s;
+						}
+					}
+				}
+			}
+		}
+	}
+}
