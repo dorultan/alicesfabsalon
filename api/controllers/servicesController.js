@@ -1,4 +1,5 @@
 const ServicesModel = require('../models/services');
+const sendMail = require('../services/mail');
 
 module.exports = {
 
@@ -58,7 +59,9 @@ module.exports = {
 	},
 
 	makeBooking: (req, res) => {
-		console.log(req.body);
-		res.status(200).json({message: "booking made, congrats !"});
+
+		// sendMail(req.body);
+
+		res.status(200).json({success: true});
 	}
 }

@@ -102,35 +102,63 @@
 				.service-description {
 					p {
 						font-size: @p-font-size;
+						background: #f1f1f1;
 					}
 				}
 
-				.buttons-w {
+				.price-informations {
 					display: flex;
 					flex-direction: row;
 					flex-wrap: nowrap;
 					align-items: center;
-					justify-content: center;
+					justify-content: space-around;
+					position: relative;
+					
+					.price-info {
+						border: none;
+						color: @price-color;
+						background: none;
+						
+					}
+					
+					i {
+						font-size: 22px;
+					}
+
 					p.price {
 						display: block;
 						margin: 10px;
 						font-size: @p-font-size;
-						color: @price-color;
+						color: #333;
 						font-weight: bold;
 
 						span {
-							color: #666;
+							color: @price-color;
 						}
 					}
+				}
+
+				.buttons-w {
 
 					a {
+						display: block;
+						text-align: center;
+						width: 100%;
 						color: #A55F2B;
 						border: 1px solid #A55F2B;
-						padding: 10px 20px;
+						font-weight: bolder;
+						padding: 10px 0px;
 						box-sizing: padding-box;
 						font-size: @button-font-size;
 						white-space: nowrap;
 						text-decoration: none;
+					}
+
+					a:hover,
+					a:focus {
+						color: #fff;
+						background: #A55F2B;
+						transition: all .3s;
 					}
 				}
 			}

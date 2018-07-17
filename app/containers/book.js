@@ -21,9 +21,9 @@ class BookContainer extends Component {
 
 	componentDidMount() {
 		let path = this.props.match.params.service;
-		path = path.replace('-', ' ');
+		path = path.replace('_', ' ');
 		path = path.replace('~', '/');
-		path = path.replace('-', ' ');
+		path = path.replace('_', ' ');
 		this.props.getByName(path);
 	}
 

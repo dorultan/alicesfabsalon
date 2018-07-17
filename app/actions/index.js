@@ -49,7 +49,6 @@ export const servicesFilter = (items, term) => {
 }
 
 export const makeBooking = (booking) => {
-	booking.service.price = JSON.stringify(booking.service.price);
 	const bookingInfo = {
 		clientName: booking.clientName,
 		bookingDate: booking.bookingDate,
