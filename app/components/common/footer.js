@@ -1,6 +1,6 @@
 import React from 'react';
 import './footer.less';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 const Footer = () => {
 
@@ -13,37 +13,30 @@ const Footer = () => {
 		  	 <li className="list-title">Our services</li>
 		  	 <li className="part-one">
 		  	 	<ul>
-			  	 <li><Link to="/services/hair">For hair</Link></li>
-			  	 <li><Link to="/services/eyes">Eyes</Link></li>
-			  	 <li><Link to="/services/manicure">Manicure</Link></li>
-			  	 <li><Link to="/services/pedicure">Pedicure</Link></li>
+			  	 <li><NavLink push="true" to="/services/hair">For hair</NavLink></li>
+			  	 <li><NavLink push="true" to="/services/eyes">Eyes</NavLink></li>
+			  	 <li><NavLink push="true" to="/services/manicure">Manicure</NavLink></li>
+			  	 <li><NavLink push="true" to="/services/pedicure">Pedicure</NavLink></li>
 		  	 	</ul>
 		  	 </li>
 		  	 <li className="part-two">
 		  	 	<ul>
-			  	 <li><Link to="/services/massage">Massage</Link></li>
-			  	 <li><Link to="/services/make-up">Make up</Link></li>
-			  	 <li><Link to="/services/facial-treatments">Facial treatments</Link></li>
-			  	 <li><Link to="/services/waxing">Waxing</Link></li>
+			  	 <li><NavLink push="true" to="/services/massage">Massage</NavLink></li>
+			  	 <li><NavLink push="true" to="/services/make up">Make up</NavLink></li>
+			  	 <li><NavLink push="true" to="/services/facial treatments">Facial treatments</NavLink></li>
+			  	 <li><NavLink push="true" to="/services/waxing">Waxing</NavLink></li>
 		  	 	</ul>
 		  	 </li>
 		  	</ul>
 		    </div>
 		  	<div className="about-map-w">
 		  	 <ul className="about-map">
-		  	  <li className="list-title">Who we are.</li>
-		  	  <li><Link to="/about">What we ofer.</Link></li>
-		  	  <li><Link to="/about">What we ofer.</Link></li>
-		  	  <li><Link to="/about">What we ofer.</Link></li>
-		  	  <li><Link to="/about">What we ofer.</Link></li>
+		  	  <li className="list-title">About us.</li>
+		  	  <li><NavLink push="true" to="/who-we-are">Who we are.</NavLink></li>
+		  	  <li><NavLink push="true" to="/who-we-are">What we do.</NavLink></li>
+		  	  <li><NavLink push="true" to="/who-we-are">Our team.</NavLink></li>
 		  	 </ul>
 		  	</div>
-		  </div>
-		  <div className="flex-col">
-		    <div className="company-info">
-		     <address><i className="fas fa-map-marked-alt"></i> 266 King St Hammersmith, London W6 0SP</address>
-		     <small>© Alice's fab 2018</small>
-		    </div>
 		  </div>
 		  <div className="flex-col">
 		   <ul className="social-links">
@@ -53,6 +46,10 @@ const Footer = () => {
 		   </ul>
 		  </div>
 		 </div>
+		<div className="company-info">
+		    <address><i className="fas fa-map-marked-alt"></i> 266 King St Hammersmith, London W6 0SP</address>
+		    <small>© Alice's fab 2018</small>
+		</div>
 		</footer>
 	)
 }

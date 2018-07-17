@@ -24,7 +24,7 @@ class PopOver extends Component {
 
 		return (
 		    <ButtonToolbar>
-		     <button className="price-info" type="button" onClick={this.handleClick}><i className="fas fa-info-circle "></i>Price info</button>
+		     <button className="price-info" type="button" onClick={this.handleClick}><i className="fas fa-info-circle"></i>Price info</button>
 		      <Overlay 
 		      show={this.state.show}
 		      target={this.state.target}

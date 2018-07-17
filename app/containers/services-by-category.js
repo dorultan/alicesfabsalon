@@ -35,10 +35,23 @@ const ServicesByCategoryContainer = (ChildComponent) => {
 			this.handleInputChange = this.handleInputChange.bind(this);
 		}
 
+		componentWillUpdate(nextProps, prevProps) {
+			if(nextProps.match.params.category !== this.props.match.params.category) {
+				this.props.getByCategory(nextProps.match.params.category);
+				return true;
+			}
+		}
+
+		componentDidUpdate() {
+			window.scrollTo(0, 0);
+		}
+
 		componentDidMount() {
 			const category = this.props.match.params.category.replace('-', ' ');
 			this.props.getByCategory(category);
 		}
+
+
 
 		handleSubmit(e) {
 			e.preventDefault();
@@ -62,7 +75,7 @@ const ServicesByCategoryContainer = (ChildComponent) => {
 
 			else {
 				return (
-					<ChildComponent services={this.props.filteredServices ? this.props.filteredServices : this.props.services}>
+					<ChildComponent services={this.props.filteredServices ? this.props.filteredServices : this.props.services} {...this.props}>
 					  <FilterComponent term={this.state.term} handleSubmit={this.handleSubmit} handleInputChange={this.handleInputChange}/>
 					</ChildComponent>
 			 	)

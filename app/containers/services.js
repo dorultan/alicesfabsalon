@@ -18,7 +18,6 @@ const ServicesContainer = (ChildComponent) => {
 		render() {
 
 			if(this.props.services.length === 0) {
-				console.log(this.props.services);
 				return (
 					<Loading/>
 				)

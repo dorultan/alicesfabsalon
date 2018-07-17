@@ -5,12 +5,21 @@ import {Link} from 'react-router-dom';
 import PopOver from './common/popover';
 
 const ServicesByCategory = (props) => {
-
+	let breadCrumbs = props.match.url.split('/');
+	console.log(breadCrumbs);
 	return (
 		<main className="services-by-category-main">
 		 <header className="services-by-category-header">
 		  {props.children}
 		 </header>
+		 <div className="bread-crumbs">
+		  <ul>
+		   <li><Link to={`/${breadCrumbs[1]}`}><i className="fas fa-arrow-alt-circle-left"></i></Link><i className="fas fa-angle-right"></i><Link to={`/${breadCrumbs[1]}`}>{breadCrumbs[1]}</Link><i className="fas fa-angle-right"></i>{breadCrumbs[2]}</li>
+		  </ul>
+		  <div className="title-w">
+		   <h1>We have <span>{props.services.length}</span> services in category <span>{props.services[0].category}</span></h1>
+		  </div>
+		 </div>
 		 <section className="services-by-category-section">
 		  <div className="flex-row">
 		  	{

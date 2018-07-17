@@ -11,20 +11,12 @@
 		display: flex;
 		justify-content: space-around;
 		flex-wrap: wrap;
+		padding-top: 20px;
 		.flex-col {
 			flex-basis: 450px;
 			position: relative;
-				
-			.company-info {
-				position: absolute;
-				text-align: center;
-				bottom: 0;
-				
-				address {
-					margin: 0;
-				}
-
-			}
+			display: flex;
+			justify-content: flex-start;
 
 			.social-links {
 				margin-top: 30px;
@@ -37,9 +29,14 @@
 				}
 			}
 			
+
 			.services-map-w,
 			.about-map-w {
 				display: inline-block;
+				
+				ul:nth-child(0) {
+					padding: 0px;
+				}
 
 				ul {
 
@@ -63,14 +60,26 @@
 			.services-map-w {
 
 				ul {
-					text-align: center;
-
+					li.list-title {
+						margin-left: 40px;
+					}
+					
 					li.part-one,
 					li.part-two {
 						display: inline-block;
 					}
 				}
 			}
+		}
+	}
+
+	.company-info {
+		width: 100%;
+		text-align: center;
+		address {
+			margin: 0;
+			padding: 0;
+
 		}
 	}
 }
