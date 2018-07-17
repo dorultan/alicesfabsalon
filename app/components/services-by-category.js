@@ -6,7 +6,6 @@ import PopOver from './common/popover';
 
 const ServicesByCategory = (props) => {
 	let breadCrumbs = props.match.url.split('/');
-	console.log(breadCrumbs);
 	return (
 		<main className="services-by-category-main">
 		 <header className="services-by-category-header">

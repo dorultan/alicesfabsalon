@@ -15,6 +15,13 @@ const ServicesContainer = (ChildComponent) => {
 			this.props.getServices()
 		}
 
+		componentDidUpdate() {
+			sr.reveal('.category-image', {
+				delay: 300,
+				duration: 1000
+			})
+		}
+
 		render() {
 
 			if(this.props.services.length === 0) {

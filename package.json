@@ -36,6 +36,7 @@
     "redux-form": "^7.4.2",
     "redux-promise": "^0.6.0",
     "redux-thunk": "^2.3.0",
+    "scrollreveal": "^3.4.0",
     "url-loader": "^1.0.1",
     "webpack": "^4.15.1",
     "webpack-cli": "^3.0.8",
