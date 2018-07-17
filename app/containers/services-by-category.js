@@ -42,10 +42,6 @@ const ServicesByCategoryContainer = (ChildComponent) => {
 			}
 		}
 
-		componentDidUpdate() {
-			window.scrollTo(0, 0);
-		}
-
 		componentDidMount() {
 			const category = this.props.match.params.category.replace('-', ' ');
 			this.props.getByCategory(category);
@@ -75,7 +71,7 @@ const ServicesByCategoryContainer = (ChildComponent) => {
 
 			else {
 				return (
-					<ChildComponent services={this.props.filteredServices ? this.props.filteredServices : this.props.services} {...this.props}>
+					<ChildComponent services={this.props.filteredServices ? this.props.filteredServices : this.props.services} match={this.props.match}>
 					  <FilterComponent term={this.state.term} handleSubmit={this.handleSubmit} handleInputChange={this.handleInputChange}/>
 					</ChildComponent>
 			 	)

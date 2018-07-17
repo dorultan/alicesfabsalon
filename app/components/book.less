@@ -1,22 +1,25 @@
+@import './variables.less';
+
 .book-main {
 	width: 100%;
 	height: auto;
 	margin: 0;
-	padding: 20px;
+	padding: 5px;
 	.container {
 		
 		.section-title {
-
 			color: #555;
+			text-align: center;
 
 			h1 {
+				font-size: @h2-font-size;
 				span {
 					padding: 0 5px;
 				}
 
 				i {
 					padding: 0 10px;
-					color: #dbdbdb;
+					color: @price-color;
 				}
 			}
 		}
@@ -40,19 +43,27 @@
 				flex-basis: 250px;
 				display: flex;
 				flex-direction: column;
+				margin: 20px;
 					
 
 				.service-name {
-					color: #fccf80;
+					font-size: @h2-font-size;
+					color: @price-color;
 				}
 			
 				.service-description {
-				
+					p {
+						font-size: @p-font-size;
+					}
 				}
 					
 				.service-price {
+					i {
+						color: @price-color;
+					}
 					p {
 						font-weight: bold;
+						font-size: 17px;
 					}
 				}
 

@@ -16,9 +16,6 @@ const ServicesByCategory = (props) => {
 		  <ul>
 		   <li><Link to={`/${breadCrumbs[1]}`}><i className="fas fa-arrow-alt-circle-left"></i></Link><i className="fas fa-angle-right"></i><Link to={`/${breadCrumbs[1]}`}>{breadCrumbs[1]}</Link><i className="fas fa-angle-right"></i>{breadCrumbs[2]}</li>
 		  </ul>
-		  <div className="title-w">
-		   <h1>We have <span>{props.services.length}</span> services in category <span>{props.services[0].category}</span></h1>
-		  </div>
 		 </div>
 		 <section className="services-by-category-section">
 		  <div className="flex-row">
@@ -38,7 +35,7 @@ const ServicesByCategory = (props) => {
 		  				  </div>
 		  				  <div className="price-informations">
 		  				   <p className="price"><span><i className="far fa-money-bill-alt"></i></span>: {ShowPrice(service.price)}</p>
-		  				   <PopOver/>
+		  				   <PopOver service={service}/>
 		  				  </div>
 		  				  <div className="buttons-w">
 		  				   <Link to={`/book/${link}`}>Book now</Link>

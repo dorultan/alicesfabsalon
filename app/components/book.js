@@ -112,6 +112,8 @@ class Book extends Component {
 			   </div>
 			   <div className="service-price">
 			   	<p>Price: {this.ShowPrice()}</p>
+			   	<p><i className="fas fa-info-circle"></i> Price information:</p>
+			   	<p>On this service the price is depending on who is doing the service.</p>
 			   </div>
 			   <div className="service-change">
 			    <Link to="/services">Change</Link>
@@ -122,7 +124,7 @@ class Book extends Component {
 			  </div>
 			 </div>
 			 <div className="section-title">
-			   <h1><i className="far fa-user"></i><span>About you:</span></h1>
+			   <h1><i className="far fa-address-book"></i><span>Booking information:</span></h1>
 			 </div>
 			 <div className="flex-row client-details">
 			  <div className="flex-col">

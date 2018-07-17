@@ -1,8 +1,14 @@
+@import '../variables.less';
 @navbar-background-color: #fff;
-@navbar-item-color: #666;
+@navbar-item-color: #000;
 .navbar.navbar-default {
 	background: @navbar-background-color;
 	border-color: @navbar-background-color;
+}
+
+.active {
+	border-bottom-color: @main-color;
+	color: @main-color;
 }
 
 .navbar {
@@ -15,9 +21,8 @@
 
 	.navbar-header {
 		.navbar-brand {
-			width: 300px;
-			height: 100px;
 			text-align: center;
+			height: 100px;
 			
 			img {
 				vertical-align: center;
@@ -34,15 +39,19 @@
 			li {
 
 				a {
-					font-size: 20px;
+					font-family: 'Lobster Two', sans-serif;
+					font-size: @intro-p-font-size;
 					color: @navbar-item-color;
 					transition: all .4s;
+					border-bottom: 1px solid transparent;
 				}
-			}
 
-			li:hover a {
-				color: #764D25;
-				transition: all .4s;
+				a:hover,
+				a:focus {
+					color: @main-color;
+					transition: all .3s;
+					border-bottom-color: @main-color;
+				}
 			}
 		}
 		
@@ -53,11 +62,22 @@
 			li {
 
 				a {
-					font-size: 20px;
-					color: #f2d7a4;
+					font-size: @p-font-size;
+					color: @price-color;
 				}
 			}
 		}
 	}
 
+}
+
+@media (max-width: 400px) {
+	.navbar {
+
+		.navbar-header {
+			.navbar-brand {
+				height: 80px;
+			}
+		}
+	}
 }

@@ -1,3 +1,5 @@
+@import './variables.less';
+
 .main-about {
 	width: 100%;
 	height: auto;
@@ -28,14 +30,14 @@
 					.title-w {
 
 						h1 {
-
+							font-size: @h1-font-size;
 						}
 					}
 
 					.content-w {
 						
 						p {
-							font-size: 20px;
+							font-size: @p-font-size;
 						}
 					}
 
@@ -109,5 +111,22 @@
 		}
 
 
+	}
+}
+
+@media (max-width: 1220px) {
+
+	.section-two {
+
+		.flex-row {
+			
+			.flex-col:first-child {
+				order: 1;
+			}
+
+			.flex-col:last-child {
+				order: 0;
+			}
+		}
 	}
 }

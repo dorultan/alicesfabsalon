@@ -12,6 +12,11 @@
 		justify-content: space-around;
 		flex-wrap: wrap;
 		padding-top: 20px;
+	
+		.flex-col:last-child {
+			text-align: center;
+		}
+
 		.flex-col {
 			flex-basis: 450px;
 			position: relative;
@@ -19,7 +24,9 @@
 			justify-content: flex-start;
 
 			.social-links {
+				display: block;
 				margin-top: 30px;
+				text-align: center;
 				li {
 					display: inline-block;
 					list-style-type: none;
@@ -34,7 +41,7 @@
 			.about-map-w {
 				display: inline-block;
 				
-				ul:nth-child(0) {
+				ul {
 					padding: 0px;
 				}
 
@@ -67,6 +74,11 @@
 					li.part-one,
 					li.part-two {
 						display: inline-block;
+
+						ul {
+							padding: 0 0 0 20px;
+							margin: 0 20px;
+						}
 					}
 				}
 			}
