@@ -1,8 +1,6 @@
 import React,{Component} from 'react';
 import NavBar from './common/nav-bar';
 import Footer from './common/footer';
-import scrollReveal from 'scrollreveal'
-window.sr = scrollReveal({reset: false});
 
 
 class App extends Component {
@@ -12,6 +10,21 @@ class App extends Component {
 
 	componentDidMount() {
 		sr.reveal('.home-header', {duration: 500});
+		sr.reveal('.section-one-img', {
+			origin: 'right',
+			distance: '100px',
+			duration: 500
+		})
+		sr.reveal('.section-two-img', {
+			origin: 'left',
+			distance: '100px',
+			duration: 500
+		})
+		sr.reveal('.section-three-img', {
+			origin: 'right',
+			distance: '100px',
+			duration: 500
+		})
 	}
 
 	componentDidUpdate() {

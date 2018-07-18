@@ -14,6 +14,9 @@ import About from './components/about';
 import ServicesByCategory from './components/services-by-category';
 import BookContainer from './containers/book';
 
+import scrollReveal from 'scrollreveal';
+
+window.sr = scrollReveal({reset: false});
 
 const history = createBrowserHistory();
 const store = createStore(rootReducer,{}, applyMiddleware(promiseMiddleware));

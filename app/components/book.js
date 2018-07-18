@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import {Field} from 'redux-form';
+import GoogleMap from './common/map';
 import './book.less';
 import {Modal, CloseButton} from 'react-bootstrap';
 
@@ -98,34 +99,7 @@ class Book extends Component {
 	render() {
 		return (
 			<main className="book-main">
-			 <div className="container">
-			  <div className="section-title">
-			   <h1><i className="far fa-smile"></i> <span>Service to book:</span></h1>
-			  </div>
-			  <div className="flex-row service-booked">
-			   <div className="flex-col">
-			   <div className="service-name">
-			    <h2>{this.props.serviceToBook.name}</h2>
-			   </div>
-			   <div className="service-description">
-			    <p>{this.props.serviceToBook.description}</p>
-			   </div>
-			   <div className="service-price">
-			   	<p>Price: {this.ShowPrice()}</p>
-			   	<p><i className="fas fa-info-circle"></i> Price information:</p>
-			   	<p>On this service the price is depending on who is doing the service.</p>
-			   </div>
-			   <div className="service-change">
-			    <Link to="/services">Change</Link>
-			   </div>
-			  </div>
-			  <div className="flex-col">
-			   <img src={images[this.props.serviceToBook.category.replace(' ', '')]} alt={this.props.serviceToBook.category.replace(' ', '')}/>
-			  </div>
-			 </div>
-			 <div className="section-title">
-			   <h1><i className="far fa-address-book"></i><span>Booking information:</span></h1>
-			 </div>
+			 <div className="flex-container">
 			 <div className="flex-row client-details">
 			  <div className="flex-col">
 			   <form className="book-form" onSubmit={this.props.handleSubmit(this.props.onSubmit)}>
@@ -151,6 +125,27 @@ class Book extends Component {
 			   </form>
 			  </div>
 			 </div>
+			  <div className="flex-row service-booked">
+			   <div className="flex-col">
+			   <div className="service-name">
+			    <h2>{this.props.serviceToBook.name}</h2>
+			   </div>
+			   <div className="service-description">
+			    <p>{this.props.serviceToBook.description}</p>
+			   </div>
+			   <div className="service-price">
+			   	<p>Price: {this.ShowPrice()}</p>
+			   	<p><i className="fas fa-info-circle"></i> Price information:</p>
+			   	<p>On this service the price is depending on who is doing the service.</p>
+			   </div>
+			   <div className="service-change">
+			    <Link to="/services">Change</Link>
+			   </div>
+			  </div>
+			  <div className="flex-col">
+			   <img src={images[this.props.serviceToBook.category.replace(' ', '')]} alt={this.props.serviceToBook.category.replace(' ', '')}/>
+			  </div>
+			 </div>
 			 </div>
 			 <Modal show={this.state.modalShow} backdrop={true} onHide={this.hideModal}>
 			  <Modal.Header>
@@ -161,6 +156,7 @@ class Book extends Component {
 			   <p>We'll confirm your bookings within one day.</p>
 			  </Modal.Body>
 			 </Modal>
+			 <GoogleMap/>
 			</main>
 		)
 	}
