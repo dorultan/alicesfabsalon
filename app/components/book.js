@@ -51,13 +51,6 @@ class Book extends Component {
 		}
 	}
 
-	componentDidUpdate(nextProps, nextState) {
-		
-		// if(nextProps.bookingStatus !== null) {
-		// 	this.showMondal();
-		// }
-	}
-
 	componentWillUpdate(nextProps, nextState) {
 		
 		if(this.state.modalShow === false) {
@@ -134,7 +127,7 @@ class Book extends Component {
 			    <p>{this.props.serviceToBook.description}</p>
 			   </div>
 			   <div className="service-price">
-			   	<p>Price: {this.ShowPrice()}</p>
+			   	<p><i className="far fa-money-bill-alt"></i> {this.ShowPrice()}</p>
 			   	<p><i className="fas fa-info-circle"></i> Price information:</p>
 			   	<p>On this service the price is depending on who is doing the service.</p>
 			   </div>
