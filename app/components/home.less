@@ -11,13 +11,14 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-				
-	
+
+
 		.flex-item:first-child {
 			flex-grow: 1;
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			flex-basis: 400px;
 			.intro {
 				flex-basis: 500px;
 				max-width: 600px;
@@ -37,7 +38,7 @@
 						font-size: @intro-p-font-size;
 					}
 				}
-					
+
 				.intro-buttons {
 					text-align: center;
 					margin: 20px 0;
@@ -60,10 +61,10 @@
 		}
 
 		.flex-item:last-child {
-			flex-grow: 4;
+			flex-grow: 1;
 			text-align: center;
 			overflow: hidden;
-			width: 750px;
+			flex-basis: 500px;
 
 			img {
 				width: 100%;

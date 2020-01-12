@@ -5,7 +5,7 @@ const path = require('path');
 
 const config = {
 	mode: process.env.NODE_ENV || 'development',
-	entry: ['babel-polyfill', './app/index.js'],
+	entry: ['./app/index.js'],
 	output: {
 		publicPath: "/",
 		filename: 'bundle.js',
@@ -15,7 +15,7 @@ const config = {
 		rules: [
 			{
 				test: /\.js$/,
-				exclude: '/node_modules/',
+				exclude: /node_modules/,
 				use: {
 					loader: 'babel-loader'
 				}
